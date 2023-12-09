@@ -1,3 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shahd</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="xogame.js" defer></script>
+</head>
+<body>
+<div class="title"><span>X O</span> GAME</div>
+<div class="container">
+    <div class="square" id="item1" onclick="game(this.id)"></div>
+    <div class="square" id="item2" onclick="game(this.id)"></div>
+    <div class="square" id="item3" onclick="game(this.id)"></div>
+
+    <div class="square" id="item4" onclick="game(this.id)"></div>
+    <div class="square" id="item5" onclick="game(this.id)"></div>
+    <div class="square" id="item6" onclick="game(this.id)"></div>
+
+    <div class="square" id="item7" onclick="game(this.id)"></div>
+    <div class="square" id="item8" onclick="game(this.id)"></div>
+    <div class="square" id="item9" onclick="game(this.id)"></div>
+</div>
+</body>
+</html>
+.game{
+    width: 255px;
+    text-align: center;
+    font-family: system-ui;
+    color: white;
+    margin: auto;
+    font-weight: 500px;
+
+}
+.title{
+    background: #f25;
+    padding: 5px 0;
+    margin: 5px 0;
+    text-align: center;
+}
+span{
+    color: #fa0;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background: #f25;
+    float: left;
+   margin: center;
+    font-size: 100px;
+    text-align: center;
+}
+    .container{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    gap: 5px;
+
+}
+.square:hover{
+    background: #000;
+}
+
 let title = document.querySelector('.title');
 let turn = 'x';
 let squares = [];
